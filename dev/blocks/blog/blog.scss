@@ -1,0 +1,357 @@
+.blog{
+    padding-bottom: 52px;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main-img{
+        margin-bottom: 20px;
+    }
+
+    &__body{
+        display: flex; 
+    }
+
+    &__posts{
+        max-width: 963px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__post{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.16);
+        position: relative;
+        background-color: #ffffff;  
+        padding-top: 15px;
+        padding-right: 26px;
+        margin-bottom: 24px;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.24);
+        padding-bottom: 20px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &_main{
+            .blog{
+                &__date{
+                    &:before{
+                        background-color: $red;
+                    }
+                }
+
+                &__text{
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: 8px;
+                        height: 100%;
+                        background-color: $red;
+                        position: absolute;
+                        left: 0;
+                    }   
+                }
+
+                &__button{
+                    background-color: $red;                    
+                }
+            }
+        }
+    }
+
+    &__date{
+        height: 34px;
+        padding-left: 32px;
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        margin-bottom: 17px;
+        position: relative;
+        &:before{
+            content: "";
+            width: 9px;
+            height: 100%;
+            background-color: $main;
+            left: 0;
+            position: absolute;
+        }
+
+        span{
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    &__title{
+        padding-left: 32px;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 23px;
+    }
+
+    &__img{
+        margin-bottom: 29px;
+        padding-left: 32px;
+    }
+
+    &__text{
+        padding-left: 32px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        p{
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__button{
+        width: 168px;
+        height: 39px;
+        background-color: $main;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        align-self: center;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    &__sidebar{
+        max-width: 343px;
+        width: 100%;
+        margin-left: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__rubrics{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.16);
+        background: $bg;
+        &-title{
+            height: 60px;
+            width: 100%;
+            display: flex;
+            color: white;
+            background: $main;
+            font-size: 24px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+        }
+        &-list{
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            a{
+                height: 40px;
+                padding-left: 28px;
+                font-size: 18px;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                color: $text;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        .list-active{
+            position: relative;
+            color: $red;
+            font-weight: 700;
+
+            &:before{
+                content: "";
+                height: 100%;
+                width: 10px;
+                background-color: $red;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    &__search{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 35px;
+        position: relative;
+        input{
+            width: 100%;
+            height: 43px;
+            text-indent: 15px;
+            color: $text;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        &-button{
+            position: absolute;
+            background: transparent;
+            color: #ccc;
+            font-size: 20px;
+            top: 50%;
+            margin-top: -10px;
+            cursor: pointer;
+            right: 20px;
+            font-weight: bold;
+        }
+    }
+
+    &__calendar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+       &-body{
+            width: 202px;
+            height: 202px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+       }
+       span{
+            font-size: 120px;
+            font-weight: 700;
+            color: #b7b7b7;
+       }
+       b{
+            font-size: 24px;
+            color: $main;
+            margin-top: -20px;
+            font-weight: 700;
+       }
+    }
+
+    &__promo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.16);
+        background: $bg;
+        padding-bottom: 25px;
+
+        &-title{
+            height: 54px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 400;
+            background-color: $main;
+        }
+        &-materials{
+            padding-top: 23px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 17px;
+            padding-right: 17px;
+            img{
+                margin-right: 12px;
+                width: 37px;
+                height: 40px;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 25px;
+                &:last-child{
+                    margin-bottom: 0;
+                    a{
+                        margin-top: 10px;
+                    }
+                    span{
+                        margin-top: -4px;
+                    }
+                }
+            }
+            a{
+                color: $text;
+                max-width: 186px;
+                width: 100%;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 400;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            span{
+                font-size: 14px;
+                font-weight: 400;
+                margin-left: 30px;
+            }
+        }
+        &-button{
+            margin-top: 40px;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: underline;
+            color: white;
+            width: 160px;
+            height: 36px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.16), 0 1px 1px 1px rgba(0, 0, 0, 0.24);
+            background-color: #00599d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            line-height: 1.2;
+        }
+    }
+
+    &__brand{
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        padding-top: 45px;
+        padding-bottom: 80px;
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        img{
+            &:first-child{
+                width: 302px;
+                height: 126px;
+                margin-bottom: 60px;
+            }
+            &:nth-child(2){
+                width: 286px;
+                height: 329px;
+                margin-bottom: 69px;
+            }
+
+            &:last-child{
+                width: 275px;
+                height: 55px;
+            }
+        }
+    }
+}

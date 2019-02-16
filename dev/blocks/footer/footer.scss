@@ -1,0 +1,91 @@
+// Footer
+.footer{
+    padding-top: 34px;
+    background-color: #f1f1f1;
+    padding-bottom: 40px;
+    &__wrapper{
+            display: flex;
+            justify-content: center;
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+
+        &:first-child{
+            max-width: 411px;
+            width: 100%;
+            margin-right: 95px;
+            img{
+                margin-bottom: 35px;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 400;
+                a{
+                    text-transform: lowercase;
+                }
+            }
+        }
+        a{
+            font-size: 12px;
+            font-weight: 400;
+            color: $text;
+        }
+
+        &:nth-child(2){
+            a{
+                text-transform: uppercase;
+                line-height: 1;
+                margin-bottom: 10px;
+
+            }
+        }
+
+        &:last-child{
+            margin-left: 53px;
+            
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+
+    &__soc{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1;
+        color: $main;
+        margin-bottom: 22px;
+        &-list{
+            display: flex;
+            
+            a{
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                background: $main;
+                justify-content: center;
+                margin-right: 17px;
+                &:hover{
+                    text-decoration: none;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+                b{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .footer-active{
+        color: $main;
+    }
+}
