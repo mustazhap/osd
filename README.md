@@ -9,7 +9,7 @@ front:
 - [x] Blog
 
 hover effects: 
-- [x] Blog
+- [ ] Blog
 
 testing:
 - [ ] Blog
