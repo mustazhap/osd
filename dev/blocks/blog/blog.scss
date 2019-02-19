@@ -168,6 +168,7 @@
                 color: $text;
                 &:hover{
                     text-decoration: none;
+                    opacity: 0.7;
                 }
             }
         }
@@ -183,6 +184,10 @@
                 background-color: $red;
                 position: absolute;
                 left: 0;
+            }
+
+            &:hover{
+                opacity: 1;
             }
         }
     }
@@ -352,6 +357,10 @@
                 width: 275px;
                 height: 55px;
             }
+        }
+
+        &:hover{
+            text-decoration: none;
         }
     }
 }
