@@ -1,6 +1,59 @@
  $(document).ready(function(){
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
+
+
+  $('.owl-service').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    dots:false,
+    autoplay: true,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp',
+    touchDrag: false,
+    mouseDrag: false,
+    navText: ['<span class="icon-prev"></span>', '<span class="icon-down"></span>'],
+    responsive:{
+        0:{
+            items:1
+        }
+        
+    }
+    })
+    $('.owl-process').owlCarousel({
+        loop:true,
+        margin: 20,
+        nav:true,
+        dots:false,
+        navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items: 2
+            },
+            1000:{
+                items: 3
+            }
+        }
+    })
+
+    $('.owl-review').owlCarousel({
+        loop:true,
+        margin: 0,
+        nav:true,
+        dots:false,
+        navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    })
+
+
   // Menu
   $(".jobs__menu").click(function(){
     if($(this).hasClass("animated")){

@@ -1,5 +1,7 @@
 // main
 @import 'settings';
+@import 'libs';
+
 
 html, body{
   margin: 0;
@@ -47,6 +49,12 @@ h1, h2, h3, h4, p{
 // Index
 @import "../../blocks/header/header";
 @import "../../blocks/blog/blog";
+@import "../../blocks/service/service";
+@import "../../blocks/process/process";
+@import "../../blocks/review/review";
+
+
+
 
 
 

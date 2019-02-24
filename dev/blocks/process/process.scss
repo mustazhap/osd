@@ -1,0 +1,43 @@
+.process{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__slider{
+        width: 60%;
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    &__img{
+        height: 60px;
+        width: auto !important;
+        
+    }
+
+    .owl-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .owl-nav{
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        width: 120%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+        margin-top: -15px;
+    }
+    .owl-theme .owl-nav [class*=owl-]:hover{
+        background: transparent;
+        color: $text;
+    }
+    .icon-next, .icon-prev{
+        font-size: 25px;
+    }
+    
+}

@@ -2,7 +2,7 @@
 .header{
     height: 87px;
     position: relative;
-
+    flex-direction: column;
 
     &__wrapper{
         display: flex;
@@ -110,4 +110,26 @@
     
 }
 
+.header__nav_sub{
+    margin-bottom: 30px;
+    margin-top: -17px;
+    .link-active{
+        position: relative;
+        color: $main;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 6px;
+            background-color: $main;
+            bottom: 0;
+            left: 0%;
+            position: absolute;
+
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
 // Header
