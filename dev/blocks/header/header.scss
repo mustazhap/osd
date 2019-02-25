@@ -1,8 +1,15 @@
 // Header
+header{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    background: white;
+    padding-bottom: 10px;
+}
 .header{
     height: 87px;
     position: relative;
-    flex-direction: column;
 
     &__wrapper{
         display: flex;
@@ -111,7 +118,6 @@
 }
 
 .header__nav_sub{
-    margin-bottom: 30px;
     margin-top: -17px;
     .link-active{
         position: relative;

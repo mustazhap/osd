@@ -1,0 +1,14 @@
+.main{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section__title{
+        margin-top: 30px;
+    }
+    .section__descr{
+        width: 40%;
+    }
+}

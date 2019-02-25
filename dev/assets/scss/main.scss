@@ -16,7 +16,7 @@ html, body{
   }
 }
 body{
-  
+    padding-top: 140px;
     background: url("../img/back.png") no-repeat;
     background-position: bottom left;
     background-size: contain;
@@ -52,6 +52,8 @@ h1, h2, h3, h4, p{
 @import "../../blocks/service/service";
 @import "../../blocks/process/process";
 @import "../../blocks/review/review";
+@import "../../blocks/main/main";
+
 
 
 
