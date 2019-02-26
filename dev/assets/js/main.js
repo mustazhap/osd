@@ -2,6 +2,11 @@
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
 
+  if($("header").find(".header__nav_sub").length){
+      $("body").css("padding-top","140px")
+  }else{
+    $("body").css("padding-top","87px")
+  }
 
   $('.owl-service').owlCarousel({
     loop:true,
