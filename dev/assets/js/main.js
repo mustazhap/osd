@@ -8,6 +8,17 @@
     $("body").css("padding-top","87px")
   }
 
+  var lastScrollTop = 0;
+    $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st == 0){
+        $("header").css("box-shadow", "none");
+    } else {
+        $("header").css("box-shadow", "0 1px 0.94px 0.06px rgba(0,0,0,.23)");
+    }
+    lastScrollTop = st;
+    });
+
   $('.owl-service').owlCarousel({
     loop:true,
     margin:0,
