@@ -86,7 +86,12 @@
         $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(2), .active:eq(4)").find("img").css("transform", "scale(0.8)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(3)").find("img").css({"transform": "scale(1)", "filter":"grayscale(0)", "-webkit-filter":"grayscale(0%)"});  
-        $(".partners__img").attr("src", $(".owl-partners").find(".active:eq(3)").find("img").attr("rel"));
+        var selected = $(".owl-partners").find(".active:eq(3)").find("img").attr("rel");
+        var image = $(".partners__img");
+        image.fadeOut('fast', function () {
+            image.attr('src', selected);
+            image.fadeIn('fast');
+    }); 
     })
     $('.owl-prev').click(function() {
         owl2.trigger('next.owl.carousel');
@@ -94,7 +99,12 @@
         $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(2), .active:eq(4)").find("img").css("transform", "scale(0.8)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(3)").find("img").css({"transform": "scale(1)", "filter":"grayscale(0)", "-webkit-filter":"grayscale(0%)"});  
-        $(".partners__img").attr("src", $(".owl-partners").find(".active:eq(3)").find("img").attr("rel"));        
+            var selected = $(".owl-partners").find(".active:eq(3)").find("img").attr("rel");
+            var image = $(".partners__img");
+            image.fadeOut('fast', function () {
+                image.attr('src', selected);
+                image.fadeIn('fast');
+        });   
     })
 
     $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
@@ -109,6 +119,8 @@
         margin: 0,
         nav:true,
         dots:false,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
         navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
         responsive:{
             0:{
@@ -117,32 +129,22 @@
         }
     })
 
-    // slick
-    $('.slick-partners').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 4,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+    $(".contacts__map").find(".map").eq(0).css("display", "none");
+
+    $(".show-map").click(function(){
+        if($(this).hasClass("diss")){
+
+        }else{
+            $(".show-map").removeClass("diss");
+            $(this).addClass("diss");
+            var a = $(this).attr("rel");
+            $(".contacts__map").find(".map").eq(0).css("display", "none");
+            $(".contacts__map").find(".map").eq(1).css("display", "none");
+            $(".contacts__map").find(".map").eq(a).css("display", "block");
+
+        }
+    })
+
 
 
    

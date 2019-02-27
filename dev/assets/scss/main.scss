@@ -19,7 +19,8 @@ body{
     padding-top: 140px;
     background: url("../img/back.png");
     background-position: top left;
-    background-size: contain;
+    background-repeat: repeat-y;
+    background-size: 100%;
 }
 
 a{
@@ -56,6 +57,8 @@ h1, h2, h3, h4, p{
 @import "../../blocks/projects/projects";
 @import "../../blocks/techno/techno";
 @import "../../blocks/partners/partners";
+@import "../../blocks/contacts/contacts";
+
 
 
 

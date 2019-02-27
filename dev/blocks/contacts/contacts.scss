@@ -1,0 +1,143 @@
+.contacts{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &-title{
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        &-row{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 14px;
+            b{
+                font-size: 23px;
+                color: $text;
+                position: absolute;
+                left: 0;
+            }
+            span{
+                font-size: 16px;
+                font-weight: 400;
+            }
+            a{
+                font-weight: 400;
+                text-decoration: underline;
+                color: $main;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            .show-map{
+                font-size: 12px;
+                text-transform: uppercase;
+
+            }
+            .diss{
+                color: rgba($main, 0.5);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .section__descr{
+        width: 50%;
+        margin-bottom: 45px;
+    }
+    &__map{
+        margin-top: 38px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        max-width: 402px;
+        width: 100%;
+        align-items: center;
+        &-row{
+            position: relative;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        label{
+            position: absolute;
+            font-size: 18px;
+            font-weight: 400;
+            left: -140px;
+            top: 50%;
+            margin-top: -12px;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            width: 120px;
+        }
+        .label1{
+            top: 12%;
+        }
+        input, textarea{
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #d6d6d6;
+            background-color: #ffffff;
+            font-size: 16px;
+            color: $text;
+        }
+        input{
+            height: 49px;
+            text-align: center;
+
+            &:placeholder{
+                color: $bg;
+            }
+        }
+        textarea{
+            text-indent: 10px;
+            padding-top: 10px;
+            resize: none;
+        }
+    }
+
+    &__button{
+        max-width: 303px;
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        box-shadow: 0px 1px 0.94px 0.06px rgba(0, 0, 0, 0.23);
+        color: white;
+        background: $main;
+        margin-top: 35px;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        cursor: pointer;
+
+        img{
+            position: absolute;
+            right: 5px;
+            top: -44px;
+        }
+    }
+    
+
+}
