@@ -1,0 +1,11 @@
+.techno{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .section__descr{
+        width: 50%;
+    }
+}

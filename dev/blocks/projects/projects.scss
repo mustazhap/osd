@@ -1,0 +1,225 @@
+.projects{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__title{
+        margin-top: 40px;
+    }
+    .section__descr{
+        width: 47%;
+    }
+
+    &__static{
+        position: relative;
+        height: 450px;
+        width: 100%;
+
+        .pr-1{
+            position: absolute;
+            left: 10%; 
+            top: 5%;
+        }
+
+        .pr-2{
+            position: absolute;
+            right: 50%;
+            bottom: 0;
+            margin-right: -350px;
+        }
+
+        .pr-3{
+            position: absolute;
+            top: 9%;
+            right: 17%;
+        }
+
+        span{
+            font-size: 29px;
+            font-weight: 500;
+            color: $main;
+            position: absolute;
+            line-height: 1;
+            b{
+                font-weight: 500;
+                font-size: 36px;
+            }
+        }
+
+        .pr-4{
+            left: 46%;
+            top: 57%;
+        }
+        .pr-5{
+            right: 32%;
+            top: 38.5%;
+        }
+        .pr-6{
+            right: 5%;
+            top: 16%;
+        }   
+    }
+
+    &__years{
+        display: flex;
+        border-top: 7px solid $main;
+        border-radius: 2px;
+        width: 90%;
+        padding-left: 30px;
+        margin-top: -50px;
+        z-index: 9;
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        position: relative;
+       
+        &:nth-child(1){
+            width: 14%;
+            .projects{
+                &__year{
+                    width: 30px;
+                    height: 30px;
+                    font-size: 10px;
+                    top: -17px;
+                    left: -15px;
+                }
+            }
+        }
+
+        &:nth-child(2){
+            width: 16%;
+            .projects{
+                &__year{
+                    width: 44px;
+                    height: 44px;
+                    font-size: 15px;
+                    top: -25px;
+                    left: -22px;
+                }
+            }
+        }
+
+        &:nth-child(3){
+            width: 16%;
+
+            .projects{
+                &__year{
+                    width: 55px;
+                    height: 55px;
+                    font-size: 20px;
+                    top: -32px;
+                    left: -27.5px;
+                }
+            }
+        }
+
+        &:nth-child(4){
+            width: 17%;
+
+            .projects{
+                &__year{
+                    width: 78px;
+                    height: 78px;
+                    font-size: 27px;
+                    top: -45px;
+                    left: -39px;
+                }
+            }
+        }
+
+        &:nth-child(5){
+            width: 18%;
+
+            .projects{
+                &__year{
+                    width: 107px;
+                    height: 107px;
+                    font-size: 35px;
+                    top: -60px;
+                    left: -53.5px;
+                }
+            }
+        }
+
+        &:nth-child(6){
+            width: 19%;
+
+            .projects{
+                &__year{
+                    width: 140px;
+                    height: 140px;
+                    font-size: 48px;
+                    top: -78px;
+                    left: -70px;
+                }
+            }
+        }
+    }
+
+    &__blocks{
+        display: flex;
+        flex-direction: column;
+        overflow-y: visible;
+        height: 230px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+    }
+    &__block{
+        padding-left: 12px;
+        position: relative;
+        margin-right: 13px;
+
+
+        &_pre{
+            margin-left: 5px;
+            border-left: 3px solid $main;
+            width: 100%;
+            height: 10000%;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 1;
+            font-weight: 400;
+            color: $main;
+            padding-bottom: 15px;
+            word-wrap: break-word;
+        }
+
+        &-circle{
+            width: 11px;
+            height: 11px;
+            background-color: $main;
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: -7px;
+        }
+    }
+    &__block_first{
+        height: 100px;
+        border-left: 3px solid $main;
+        margin-left: 5px;
+        &:before{
+            content: none;
+        }
+    }
+
+    &__year{
+        border: 2px solid $main;
+        background-color: #ffffff;
+        font-weight: 400;
+        border-radius: 50%;
+        color: $main;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+}

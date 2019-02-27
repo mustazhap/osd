@@ -55,6 +55,54 @@
             }
         }
     })
+    $('.owl-partners').owlCarousel({
+        loop:true,
+        margin: 20,
+        nav:true,
+        dots:false,
+        touchDrag: false,
+        mouseDrag: false,
+        navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items: 2
+            },
+            1000:{
+                items: 7
+            }
+        }
+    }).on('changed.owl.carousel', function(event) {
+
+    })
+
+    var owl2 = $('.owl-partners');
+    owl2.owlCarousel();
+    $('.owl-next').click(function() {
+        owl2.trigger('next.owl.carousel');
+        $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(2), .active:eq(4)").find("img").css("transform", "scale(0.8)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(3)").find("img").css({"transform": "scale(1)", "filter":"grayscale(0)", "-webkit-filter":"grayscale(0%)"});  
+        $(".partners__img").attr("src", $(".owl-partners").find(".active:eq(3)").find("img").attr("rel"));
+    })
+    $('.owl-prev').click(function() {
+        owl2.trigger('next.owl.carousel');
+        $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(2), .active:eq(4)").find("img").css("transform", "scale(0.8)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+        $(".owl-partners").find(".active:eq(3)").find("img").css({"transform": "scale(1)", "filter":"grayscale(0)", "-webkit-filter":"grayscale(0%)"});  
+        $(".partners__img").attr("src", $(".owl-partners").find(".active:eq(3)").find("img").attr("rel"));        
+    })
+
+    $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+    $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+    $(".owl-partners").find(".active:eq(2), .active:eq(4)").find("img").css("transform", "scale(0.8)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
+    $(".owl-partners").find(".active:eq(3)").find("img").css({"transform": "scale(1)", "filter":"grayscale(0)", "-webkit-filter":"grayscale(0%)"});  
+    $(".partners__img").attr("src", $(".owl-partners").find(".active:eq(3)").find("img").attr("rel"));    
+
 
     $('.owl-review').owlCarousel({
         loop:true,
@@ -69,6 +117,35 @@
         }
     })
 
+    // slick
+    $('.slick-partners').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+
+   
 
   // Menu
   $(".jobs__menu").click(function(){
