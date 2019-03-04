@@ -144,7 +144,7 @@
     })
 
     $el = $(".owl-service");
-    var bottom = $el.position().top + $el.offset().top + $el.outerHeight(true) - 25t0;
+    var bottom = $el.position().top + $el.offset().top + $el.outerHeight(true) - 250;
     $(".services__more").click(function() {
         $('html, body').animate({
             scrollTop: bottom
