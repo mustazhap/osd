@@ -22,11 +22,11 @@
   $('.owl-service').owlCarousel({
     loop:true,
     margin:0,
-    nav:true,
+    nav:false,
     dots:false,
     autoplay: true,
-    animateOut: 'slideOutUp',
-    animateIn: 'slideInUp',
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     touchDrag: false,
     mouseDrag: false,
     navText: ['<span class="icon-prev"></span>', '<span class="icon-down"></span>'],
@@ -74,13 +74,11 @@
                 items: 7
             }
         }
-    }).on('changed.owl.carousel', function(event) {
-
     })
 
     var owl2 = $('.owl-partners');
     owl2.owlCarousel();
-    $('.owl-next').click(function() {
+    $('.owl-partners').find(".owl-next").click(function() {
         owl2.trigger('next.owl.carousel');
         $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
@@ -93,7 +91,7 @@
             image.fadeIn('fast');
     }); 
     })
-    $('.owl-prev').click(function() {
+    $('.owl-partners').find('.owl-prev').click(function() {
         owl2.trigger('next.owl.carousel');
         $(".owl-partners").find(".active:eq(0), .active:eq(6)").find("img").css("transform", "scale(0.5)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
         $(".owl-partners").find(".active:eq(1), .active:eq(5)").find("img").css("transform", "scale(0.6)").css("transform", "scale(0.5)").css({"filter":"grayscale(100%)", "-webkit-filter":"grayscale(100%)"});
@@ -145,9 +143,14 @@
         }
     })
 
+    $el = $(".owl-service");
+    var bottom = $el.position().top + $el.offset().top + $el.outerHeight(true) - 25t0;
+    $(".services__more").click(function() {
+        $('html, body').animate({
+            scrollTop: bottom
+        }, 1000);
+    });
 
-
-   
 
   // Menu
   $(".jobs__menu").click(function(){
