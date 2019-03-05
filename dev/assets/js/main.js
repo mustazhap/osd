@@ -127,6 +127,21 @@
         }
     })
 
+    $('.owl-about').owlCarousel({
+        loop:true,
+        margin: 0,
+        nav:true,
+        dots:false,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    })
+
     $(".contacts__map").find(".map").eq(0).css("display", "none");
 
     $(".show-map").click(function(){
@@ -150,6 +165,18 @@
             scrollTop: bottom
         }, 1000);
     });
+
+    $(".career__list li").click(function(){
+        var $this = $(this).attr("rel");
+        $(".career__list li").removeClass("active-career");
+        $(this).addClass("active-career");
+        $(".career__block").css("display", "none");
+        $(".career__block").eq($this).css("display", "flex");
+    })
+
+    $(".career-back").click(function(){
+        $(".career__page").toggleClass("side-active");
+    })
 
 
   // Menu

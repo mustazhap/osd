@@ -1,0 +1,42 @@
+.about{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .section__title{
+        text-align: left;
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+
+        &:first-child{
+            padding-left: 23px;
+        }
+
+        &:last-child{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+
+    &__text{
+        p{
+            font-size: 16px;
+            font-weight: 400;
+        } 
+    }
+    .process__slider{
+        width: 80% !important;
+    }
+    
+}
