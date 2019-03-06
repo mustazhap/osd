@@ -143,6 +143,8 @@
     })
 
     $(".contacts__map").find(".map").eq(0).css("display", "none");
+    $(".show-map").eq(1).addClass("diss");
+
 
     $(".show-map").click(function(){
         if($(this).hasClass("diss")){
@@ -158,13 +160,7 @@
         }
     })
 
-    $el = $(".owl-service");
-    var bottom = $el.position().top + $el.offset().top + $el.outerHeight(true) - 250;
-    $(".services__more").click(function() {
-        $('html, body').animate({
-            scrollTop: bottom
-        }, 1000);
-    });
+   
 
     $(".career__list li").click(function(){
         var $this = $(this).attr("rel");
