@@ -141,7 +141,21 @@
             }
         }
     })
+    $('.owl-traning').owlCarousel({
+        loop:false,
+        margin: 10,
+        nav:true,
+        dots:false,
+        
+        navText: ['<span class="icon-pr_prev"></span>', '<span class="icon-pr-next"></span>'],
+        responsive:{
+            0:{
+                items:4
+            }
+        }
+    })
 
+    // map on contacts
     $(".contacts__map").find(".map").eq(0).css("display", "none");
     $(".show-map").eq(1).addClass("diss");
 
@@ -160,8 +174,38 @@
         }
     })
 
-   
+    // traning
+        $name = $(".traning__info").eq(0).find(".tran-name").html();
+        $date = $(".traning__info").eq(0).find(".tran-date").html();
+        $descr = $(".traning__info").eq(0).find(".tran-descr").html();
+        $time = $(".traning__info").eq(0).attr(".tran-time");
+        $cost = $(".traning__info").eq(0).attr(".tran-cost");
+        $place = $(".traning__info").eq(0).attr(".tran-place");
 
+        $(".traning__item-title").html($name);
+        $(".traning__item-time").html($time);
+        $(".traning__item-date").html($date);
+        $(".traning__item-place").html($place);
+        $(".traning__item-descr").html($descr);
+        $(".traning__item-cost").html($cost);
+        
+    $(".traning__info").click(function(){
+        $name = $(this).find(".tran-name").html();
+        $date = $(this).find(".tran-date").html();
+        $descr = $(this).find(".tran-descr").html();
+        $time = $(this).attr("tran-time");
+        $cost = $(this).attr("tran-cost");
+        $place = $(this).attr("tran-place");
+
+        $(".traning__item-title").html($name);
+        $(".traning__item-time").html($time);
+        $(".traning__item-date").html($date);
+        $(".traning__item-place").html($place);
+        $(".traning__item-cost").html($cost);
+        $(".traning__item-descr").html($descr);
+    })
+   
+    // career list
     $(".career__list li").click(function(){
         var $this = $(this).attr("rel");
         $(".career__list li").removeClass("active-career");
@@ -174,6 +218,7 @@
         $(".career__page").toggleClass("side-active");
     })
 
+    // popup
     $(".popup__button").click(function(){ //popup call-button
         $el = $(this);
         $(".popup").eq($el.attr("rel")).show().css("display", "flex");
