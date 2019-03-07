@@ -25,8 +25,8 @@
     nav:false,
     dots:false,
     autoplay: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
+    animateOut: 'fadeOutLeft',
+    animateIn: 'fadeInRight',
     touchDrag: false,
     mouseDrag: false,
     navText: ['<span class="icon-prev"></span>', '<span class="icon-down"></span>'],
@@ -117,8 +117,8 @@
         margin: 0,
         nav:true,
         dots:false,
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
+        animateOut: 'fadeOutLeft',
+        animateIn: 'fadeInRight',
         navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
         responsive:{
             0:{
@@ -132,8 +132,8 @@
         margin: 0,
         nav:true,
         dots:false,
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
+        animateOut: 'fadeOutLeft',
+        animateIn: 'fadeInRight',
         navText: ['<span class="icon-prev"></span>', '<span class="icon-next"></span>'],
         responsive:{
             0:{
@@ -174,6 +174,22 @@
         $(".career__page").toggleClass("side-active");
     })
 
+    $(".popup__button").click(function(){ //popup call-button
+        $el = $(this);
+        $(".popup").eq($el.attr("rel")).show().css("display", "flex");
+        $("body").css("overflow", "hidden");
+    })
+    $(".fa-times").click(function(){ //popup close-button
+        $("body").css("overflow", "auto");
+        $(".popup").hide();
+    })
+    $(".popup").click(function(){ //popup hide on body
+        $(this).hide();
+        $("body").css("overflow", "auto");
+    })
+    $(".popup__wrapper").click(function(event){ //popup not hide on text
+        event.stopPropagation();
+    })
 
   // Menu
   $(".jobs__menu").click(function(){
