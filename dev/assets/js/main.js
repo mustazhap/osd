@@ -154,6 +154,19 @@
             }
         }
     })
+    $('.owl-relize').owlCarousel({
+        loop:false,
+        margin: 40,
+        nav:true,
+        dots:false,
+        
+        navText: ['<span class="icon-pr_prev"></span>', '<span class="icon-pr-next"></span>'],
+        responsive:{
+            0:{
+                items:2
+            }
+        }
+    })
 
     // map on contacts
     $(".contacts__map").find(".map").eq(0).css("display", "none");
@@ -224,7 +237,17 @@
         $(".popup").eq($el.attr("rel")).show().css("display", "flex");
         $("body").css("overflow", "hidden");
     })
+    $(".relize__block-img").click(function(){ //popup call-button
+        $el = $(this);
+        $("body").css("overflow", "hidden");
+        $(".popup").eq($el.attr("rel")).show().css("display", "flex");
+    })
     $(".fa-times").click(function(){ //popup close-button
+        $("body").css("overflow", "auto");
+        $(".popup").hide();
+    })
+
+    $(".popup__close").click(function(){ //popup close-button
         $("body").css("overflow", "auto");
         $(".popup").hide();
     })
