@@ -27,12 +27,17 @@
     autoplay: true,
     animateOut: 'fadeOutLeft',
     animateIn: 'fadeInRight',
-    touchDrag: false,
-    mouseDrag: false,
     navText: ['<span class="icon-prev"></span>', '<span class="icon-down"></span>'],
     responsive:{
         0:{
-            items:1
+            items:1,
+            touchDrag: true,
+            mouseDrag: true,
+        },
+        570:{
+            items:1,
+            touchDrag: false,
+            mouseDrag: false,
         }
         
     }
@@ -55,6 +60,65 @@
             }
         }
     })
+
+    // projects
+    if(w<1000){
+        $('.owl-projects').owlCarousel({
+            loop:false,
+            margin: 0,
+            nav:true,
+            dots:false,
+            touchDrag: false,
+            mouseDrag: false,
+            navText: ['<span class="icon-lleft"></span>', '<span class="icon-rright"></span>'],
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items: 3
+                }
+            }
+        })
+        if(w>600){
+            var owlprojects = $('.owl-projects');
+            owlprojects.owlCarousel();
+            $(".owl-projects").find(".active").eq(1).addClass("owl-active-act");
+           
+            $('.owl-next').click(function() {
+                owlprojects.trigger('next.owl.carousel');
+                $(".owl-projects").find(".owl-item").removeClass("owl-active-act");
+                $(".owl-projects").find(".active").eq(1).addClass("owl-active-act");
+          
+            })
+            $('.owl-prev').click(function() {
+                owlprojects.trigger('prev.owl.carousel');
+                $(".owl-projects").find(".owl-item").removeClass("owl-active-act");
+                $(".owl-projects").find(".active").eq(1).addClass("owl-active-act");
+            })
+        }
+        if(w<600){
+            var owlprojects = $('.owl-projects');
+            owlprojects.owlCarousel();
+            $(".owl-projects").find(".active").eq(0).addClass("owl-active-act");
+        
+            $('.owl-next').click(function() {
+                owlprojects.trigger('next.owl.carousel');
+                $(".owl-projects").find(".owl-item").removeClass("owl-active-act");
+                $(".owl-projects").find(".active").eq(0).addClass("owl-active-act");
+        
+            })
+            $('.owl-prev').click(function() {
+                owlprojects.trigger('prev.owl.carousel');
+                $(".owl-projects").find(".owl-item").removeClass("owl-active-act");
+                $(".owl-projects").find(".active").eq(0).addClass("owl-active-act");
+            })
+        }
+        
+    }
+ 
+
+    // partners
     $('.owl-partners').owlCarousel({
         loop:true,
         margin: 20,
@@ -260,23 +324,36 @@
     })
 
   // Menu
-  $(".jobs__menu").click(function(){
-    if($(this).hasClass("animated")){
-      $(".sidebar").css("left", "0");
-        if (w > 600){
-        $(this).css("left","360px").removeClass("animated").find("i").css("transform", "rotate(180deg)");
-        }else{
-            $(this).css({"left":"90%"}).removeClass("animated").find("i").css("transform", "rotate(180deg)");
-            $("body").css("overflow","hidden");
-        }
-    }else{
-      // $("body").css("overflow-x", "visible");
-      $(".sidebar").css("left", "-100%");
+  $(".mob_menu").click(function(event){
+    if($(this).hasClass("mob_active")){
+      $(".mob_block").css("left", "-100%");
       $("body").css("overflow","auto");
-      // $(".jobs").css({"position": "relative", "left": "0px"});
-      $(this).css("left","15px").addClass("animated").find("i").css("transform", "rotate(0)");  
+        
+    }else{
+      $(".mob_block").css("left", "0%");
+      $("body").css("overflow","hidden");
+      $(this).removeClass("mob_active");
     }
+    event.stopPropagation();
   });
+
+  $(".mob_close").click(function(){
+    $(".mob_block").css("left", "-100%");
+    $("body").css("overflow","auto");
+    $(".mob_block").removeClass("mob_active");
+});
+
+$("body").click(function(){
+    $(".mob_block").css("left", "-100%");
+    $("body").css("overflow","auto");
+    $(".mob_block").removeClass("mob_active");
+});
+
+$(".mob_block").click(function(event){
+    event.stopPropagation();
+});
+
+
 // 
 
 

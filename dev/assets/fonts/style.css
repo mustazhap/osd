@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?gqqqs2');
-  src:  url('fonts/icomoon.eot?gqqqs2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?gqqqs2') format('truetype'),
-    url('fonts/icomoon.woff?gqqqs2') format('woff'),
-    url('fonts/icomoon.svg?gqqqs2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?cx4w6z');
+  src:  url('fonts/icomoon.eot?cx4w6z#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cx4w6z') format('truetype'),
+    url('fonts/icomoon.woff?cx4w6z') format('woff'),
+    url('fonts/icomoon.svg?cx4w6z#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-lleft:before {
+  content: "\e911";
+  color: #00599d;
+}
+.icon-rright:before {
+  content: "\e917";
+  color: #00599d;
+}
+.icon-home:before {
+  content: "\e90f";
+  color: #00599d;
+}
+.icon-table:before {
+  content: "\e910";
+}
+.icon-paper:before {
+  content: "\e912";
+  color: #636466;
+}
+.icon-think:before {
+  content: "\e913";
+  color: #636466;
+}
+.icon-tv:before {
+  content: "\e914";
+  color: #636466;
+}
+.icon-mess:before {
+  content: "\e915";
+  color: #636466;
+}
+.icon-portf:before {
+  content: "\e916";
+  color: #636466;
+}
+.icon-menu:before {
+  content: "\e90e";
+  color: #636466;
+}
 .icon-pr_prev:before {
   content: "\e90c";
   color: #d3e1ea;

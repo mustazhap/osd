@@ -22,7 +22,6 @@ var path = {
         css: 'public/assets/css/',
         img: 'public/assets/img/' ,
         fonts: 'public/assets/fonts/',
-        libs: 'public/assets/libs/',
         media: 'public/assets/media'
     },
     src: { //Пути откуда брать исходники
@@ -31,7 +30,6 @@ var path = {
         style: 'dev/assets/scss/main.scss',
         img: 'dev/assets/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'dev/assets/fonts/**/*.*',
-        libs: 'dev/assets/libs/**/*.*',
         media: 'dev/assets/media/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -40,7 +38,6 @@ var path = {
         style: 'dev/**/*.scss',
         img: 'dev/assets/img/**/*.*',
         fonts: 'dev/assets/fonts/**/*.*',
-        libs: 'dev/assets/libs/**/*.*',
         media: 'dev/assets/media/**/*.*'
 
     },
@@ -119,11 +116,6 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.public.fonts))
 });
 
-gulp.task('libs:build', function() {
-    gulp.src(path.src.libs)
-        .pipe(gulp.dest(path.public.libs))
-});
-
 
 gulp.task('media:build', function() {
     gulp.src(path.src.media)
@@ -137,7 +129,6 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'image:build',
-    'libs:build',
     'media:build'
 ]);
 
@@ -157,9 +148,6 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
-    });
-    watch([path.watch.libs], function(event, cb) {
-        gulp.start('libs:build');
     });
 });
 
