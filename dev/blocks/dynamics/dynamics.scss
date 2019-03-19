@@ -21,3 +21,16 @@
         }
     }
 }
+
+@media screen and (max-width: 1050px){
+    .dynamics{
+        margin-top: 90px;
+    }
+    .dynamics .section__descr{
+        width: 80%;
+    }
+    .dynamics__img{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -18,6 +18,7 @@
         background: white;
         padding-top: 35px;
         transition: 0.5s all;
+
     }
 
     &__block{
@@ -80,6 +81,7 @@
         display: flex;
         flex-direction: column;
         transition: 0.5s all;
+        padding-right: 20px;
         h4{
             margin-top: 15px;
             padding-top: 15px;
@@ -313,5 +315,107 @@
         width: 45%;
         font-size: 20px;
         cursor: pointer;
+    }
+}
+.cmenu-button{
+    display: none;
+}
+
+@media screen and (max-width: 1160px){
+    .career__page{
+        position: relative;
+        flex-direction: column;
+    }
+    .career__side {
+        position: absolute;
+        left: -200%;
+        top: 0;
+        margin-right: 0;
+        background: white;
+        z-index: 9;
+        box-shadow: rgba(0, 0, 0, 0.23) 0px 1px 0.94px 0.06px;
+
+    }
+    .career__body{
+        width: 100%;
+    }
+    .career__phone{
+        margin-left: 0 !important;
+        margin-right: 0 ;
+    }
+    .cmenu-button{
+        display: block;
+        width: max-content;
+        height: max-content;
+        text-decoration: none;
+        color: $text;
+        background: white;
+        padding: 20px 15px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        b:before{
+            display: block;
+            transform: rotate(180deg);
+        }
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 810px){
+    .career__action{
+        flex-direction: column;
+        align-items: center;
+
+        &-block{
+            justify-content: center;
+            padding-left: 0;
+        }
+    }
+    .career__button{
+        height: 64px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .career__title{
+        line-height: 1;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .career__action-block{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        span{
+            margin-bottom: 5px;
+        }
+    }
+    .career__title{
+        font-size: 25px;
+    }
+    .career__info h4{
+        font-size: 25px;
+        padding-left: 25px;
+    }
+    .career__info p{
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .career__button{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 450px){
+    .career__side{
+        max-width: 100%;
     }
 }

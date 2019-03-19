@@ -167,6 +167,8 @@ header{
         z-index: 9999999;
         transition: 0.5s all;
         align-items: center;
+        overflow: auto;
+        display: block;
     }
 
     &_close{
@@ -239,7 +241,9 @@ header{
 
     &_links{
         display: flex;
+        margin-top: 50px;
         padding-bottom: 80px;
+        justify-content: center;
         a{
             font-size: 18px;
             width: 45px;
@@ -258,7 +262,25 @@ header{
     }
 }
 
+.link_active{
+    background: rgba(#636466, 0.1);
+        color: $main !important;
+        b:before{
+        color: $main !important;
 
+        }
+}
+.mob_sub{
+    display: flex;
+    flex-direction: column;
+    a{
+        font-size: 16px !important;
+        height: 25px !important;
+    }
+}
+.sub_active{
+    color: $main !important;
+}
 @media screen and (max-width: 1327px){
     .header{
         &__logo{

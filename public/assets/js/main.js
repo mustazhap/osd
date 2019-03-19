@@ -132,7 +132,7 @@
                 items:1
             },
             600:{
-                items: 2
+                items: 3
             },
             1000:{
                 items: 7
@@ -227,11 +227,17 @@
         navText: ['<span class="icon-pr_prev"></span>', '<span class="icon-pr-next"></span>'],
         responsive:{
             0:{
+                items:1
+            },
+            850:{
                 items:2
             }
         }
     })
 
+    $(".cmenu-button").click(function(){
+        $(".career__side").css("left", "0");
+    });
     // map on contacts
     $(".contacts__map").find(".map").eq(0).css("display", "none");
     $(".show-map").eq(1).addClass("diss");
@@ -290,10 +296,16 @@
         $(".career__block").css("display", "none");
         $(".career__block").eq($this).css("display", "flex");
     })
-
+    if(w > 1160){
     $(".career-back").click(function(){
         $(".career__page").toggleClass("side-active");
     })
+    }
+    else{
+        $(".career-back").click(function(){
+            $(".career__side").css("left", "-200%");
+        })
+    }
 
     // popup
     $(".popup__button").click(function(){ //popup call-button

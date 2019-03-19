@@ -112,10 +112,14 @@
     }
     .service__item-text span{
         font-size: 15px;
-        justify: left;
+        line-height: 1.1;
+        text-align: left;
     }
     .service__item-text h2{
         font-size: 23px;
         margin-bottom: 5px;
+    }
+    .service__item-text p{
+        width: 100%;
     }
 }

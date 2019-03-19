@@ -40,3 +40,34 @@
     }
     
 }
+@media screen and (max-width: 850px){
+    .about__wrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+    .about__col:first-child{
+        padding-left: 0;
+    }
+
+    .about__col{
+        width: 100%;
+    }
+    .process__slider{
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .about__text p{
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .dynamics{
+        margin-top: 50px !important;
+    }
+    .process__slider{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+}

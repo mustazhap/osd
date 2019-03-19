@@ -92,3 +92,115 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px){
+    .footer{
+        &__wrapper{
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        &__col{
+            &:last-child{
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .footer{
+        &__wrapper{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__col{
+            display: none;
+            &:first-child{
+                width: 100%;
+                margin: 0;
+                display: flex;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1110px){
+    .service__img {
+        height: auto;
+        width: 100%;
+    }
+    .review .section__descr {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1300px){
+   
+    .review .section__descr {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 860px){
+   .review__item{
+       flex-direction: column;
+       align-items: center;
+   }
+   .review .owl-nav {
+    top: 15%;
+   }
+   .review__item-text{
+       margin-top: 20px;
+   }
+}
+@media screen and (max-width: 590px){
+    .review__slider{
+        width: 100%;
+    }
+    .review .owl-nav{
+        width: 100%;
+        left: 0;
+    }
+    .review{
+        .icon-prev{
+            margin-left: 0 !important;
+        }
+        .icon-next{
+            margin-right: 0 !important;
+        }
+    }
+    .review__item-text{
+        margin-left: 0;
+    }
+    .review .section__descr{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .service__img{
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .review__slider{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 440px){
+    .review__item-text p{
+        font-size: 13px;
+    }
+    .review .section__descr{
+        font-size: 13px;
+        line-height: 1.1;
+    }
+    .review__item-img{
+        height: 150px;
+        width: 150px !important;
+    }
+    .review__item-col{
+        align-items: center;
+    }
+}
