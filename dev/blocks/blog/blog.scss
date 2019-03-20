@@ -414,3 +414,101 @@
         }
     }
 }
+
+@media screen and (max-width: 1050px){
+    .blog__sidebar{
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        flex-direction: row;
+    }
+    .blog__body{
+        flex-direction: column-reverse;
+    }
+    
+    .blog__rubrics-title, .blog__rubrics-list, .blog__brand{
+        display: none;
+    }
+    .blog__search{
+        margin-top: 10px;
+    }
+    .blog__posts{
+        max-width: 100%;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .blog__span{
+        font-size: 100px;
+    }
+    .blog__sidebar{
+        flex-direction: column;
+    }
+    .blog__calendar{
+        display: none;
+    }
+    .blog__search{
+        margin-bottom: 15px;
+    }
+    .blog__promo-materials a{
+        max-width: 250px;
+    }
+    .blog__promo-materials div:last-child a{
+        margin-top: 0;
+    }
+    .blog__promo-button{
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .blog__span {
+        font-size: 70px;
+    }
+    .blog__main-img img{
+        height: 150px;
+    }
+    .blog__title{
+        font-size: 22px;
+        line-height: 1.3;
+        padding-left: 18px;
+        margin-bottom: 15px;
+    }
+    .blog__date{
+        font-size: 14px;
+        padding-left: 18px;
+    }
+    .blog__img{
+        padding-left: 18px;
+    }
+    .blog__text{
+        padding-left: 18px;
+    }
+    .blog__promo-button, .blog__button{
+
+    font-size: 13px;
+    width: 140px;
+    height: 30px;
+    }
+
+}
+@media screen and (max-width: 470px){
+    .blog__promo-materials a{
+        max-width: 180px;
+    }
+    .blog__span {
+        font-size: 50px;
+    }
+    .blog__title{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 370px){
+    .blog__main-img img{
+        height: 130px;
+    }
+}
